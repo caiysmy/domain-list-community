@@ -1,10 +1,8 @@
 name: Build dlc.dat
 on:
-  push:
-    branches:
-      - master
-    paths-ignore:
-      - "**/README.md"
+  workflow_dispatch: #手动运行
+  schedule:
+    - cron: "0 2 * * *" #utc时间2:00,北京时间10点
 jobs:
   build:
     name: Build
