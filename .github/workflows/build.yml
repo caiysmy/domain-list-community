@@ -1,5 +1,9 @@
 name: Build dlc.dat
 on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * *"
+# UTC+8 10:00 AM
   push:
     branches:
       - master
